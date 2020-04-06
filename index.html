@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Neue';
+      font-size: 17px;
+      background: rgba(0, 0, 0);
+    }
+
+    #fuckinDegensBud {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 150%;
+      min-height: 50%;
+    }
+
+    video {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: fill;
+    }
+
+    .content {
+      position: fixed;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+
+    #buttonses {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #buttonses:hover {
+      background: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <video autoplay loop id="fuckinDegensBud">
+    <source src="embarrassing.mp4" type="video/mp4">
+    UPGRADE FERDA! Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <h1><a href="https://letterkenny.fandom.com/wiki/Coach">it's fuckin' embarrassing!</a></h1>
+    <p>The coach is known for his short and explosive temper, manifested not only in addressing his players, but when he
+      is distracted on the golf course ("A Fuss at the Golf Course") or on stage ("Letterkenny Talent Show")</p>
+    <button id="buttonses" onclick="gearDownBigRig()">Pauses its</button>
+  </div>
+
+  <script>
+    var video = document.getElementById("fuckinDegensBud");
+    var btn = document.getElementById("buttonses");
+
+    function gearDownBigRig() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pauses its";
+      } else {
+        video.pause();
+        btn.innerHTML = "Plays its";
+      }
+    }
+  </script>
+</body>
+
+</html>
